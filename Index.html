@@ -12,7 +12,7 @@
   <header>
     <div class="header-content">
       <!-- LOGO (ajusta la ruta de la imagen según tu archivo) -->
-      <img src="Assets/img/logo-lalalatte.jpg" alt="La La Latte Logo" class="logo" />
+      <img src="Assets/img/logo-lalalatte.png" alt="La La Latte Logo" class="logo" />
 
       <!-- MENÚ DE NAVEGACIÓN -->
       <nav>
@@ -27,13 +27,24 @@
   </header>
 
   <!-- SECCIÓN HERO (pantalla completa) -->
-  <section id="inicio" class="hero">
+  <section id="inicio" class="hero-video">
+    <!-- El video de fondo -->
+    <video autoplay muted loop playsinline id="heroVideo">
+      <source src="Assets/videos/cafe-background.mp4" type="video/mp4" />
+      Tu navegador no soporta HTML5 video.
+    </video>
+  
+    <!-- Overlay para oscurecer ligeramente el video (opcional) -->
+    <div class="hero-overlay"></div>
+  
+    <!-- Contenido superpuesto (texto, botón, etc.) -->
     <div class="hero-content">
       <h2>Bienvenido a La La Latte</h2>
       <p>El mejor café en un ambiente único y acogedor</p>
       <a href="#nosotros" class="btn">Conócenos</a>
     </div>
   </section>
+  
 
   <!-- SECCIÓN NOSOTROS -->
   <section id="nosotros">
@@ -49,12 +60,53 @@
     <p>Email: info@lalalatte.com</p>
   </section>
 
+  <!-- SECCIÓN EQUIPO -->
+  <section id="equipo" class="equipo">
+    <h2>Nuestro Equipo</h2>
+    <p>Conoce a las personas que hacen posible cada taza de café en La La Latte.</p>
+  
+    <div class="equipo-container">
+      <!-- Miembro 1 -->
+      <div class="equipo-miembro">
+        <img src="Assets/img/team1.jpg" alt="Barista 1">
+        <h3>Juan Pérez</h3>
+        <span>Barista Experto</span>
+        <p>
+          Con 5 años de experiencia en el arte latte, Juan es el encargado de 
+          asegurar que cada taza tenga un sabor inigualable.
+        </p>
+      </div>
+  
+      <!-- Miembro 2 -->
+      <div class="equipo-miembro">
+        <img src="Assets/img/team2.jpg" alt="Barista 2">
+        <h3>María Gómez</h3>
+        <span>Especialista en Café de Origen</span>
+        <p>
+          Apasionada por la calidad y el origen de cada grano, María selecciona 
+          cuidadosamente nuestros cafés para brindar la mejor experiencia.
+        </p>
+      </div>
+  
+      <!-- Miembro 3 -->
+      <div class="equipo-miembro">
+        <img src="Assets/img/team3.jpg" alt="Barista 3">
+        <h3>Andrés López</h3>
+        <span>Gerente de Sucursal</span>
+        <p>
+          Encargado de la coordinación y el servicio al cliente. Andrés se asegura 
+          de que todo funcione perfectamente para tu disfrute.
+        </p>
+      </div>
+    </div>
+  </section>
+  
   <!-- FOOTER -->
   <footer>
     <div class="footer-content">
       <!-- Columna 1: Logo y descripción -->
       <div class="footer-col">
-        <img src="Assets/img/logo-lalalatte.jpg" alt="La La Latte Logo" class="footer-logo" />
+        <img src="Assets/img/logo-lalalatte.png" alt="La La Latte Logo" class="footer-logo" />
         <p>
           We are a creative coffee shop always looking for new ideas
           to bring you the best experiences in your everyday life.
