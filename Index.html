@@ -28,9 +28,29 @@
 
   <!-- SECCIÓN HERO (pantalla completa) -->
   <section id="inicio" class="hero-video">
-    <!-- El video de fondo -->
-    <video autoplay muted loop playsinline id="heroVideo">
+    <!-- Video para ESCRITORIO -->
+    <video
+      class="video-desktop"
+      autoplay
+      muted
+      loop
+      playsinline
+      id="heroVideoDesktop"
+    >
       <source src="Assets/videos/cafe-background.mp4" type="video/mp4" />
+      Tu navegador no soporta HTML5 video.
+    </video>
+  
+    <!-- Video para MÓVIL -->
+    <video
+      class="video-mobile"
+      autoplay
+      muted
+      loop
+      playsinline
+      id="heroVideoMobile"
+    >
+      <source src="Assets/videos/Video-Hero.mp4" type="video/mp4" />
       Tu navegador no soporta HTML5 video.
     </video>
   
@@ -44,6 +64,7 @@
       <a href="#nosotros" class="btn">Conócenos</a>
     </div>
   </section>
+  
   
 
   <!-- SECCIÓN NOSOTROS -->

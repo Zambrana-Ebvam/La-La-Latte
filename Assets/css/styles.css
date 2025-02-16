@@ -92,36 +92,45 @@ header.scrolled {
   color: var(--white);
 }
 
-/* El video ocupa todo el contenedor */
-.hero-video #heroVideo {
+/* Estilos base para ambos videos */
+.hero-video video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Similar a background-size: cover */
+  object-fit: cover; /* Llenar el contenedor */
   z-index: -1;       /* Detrás del contenido */
 }
 
-/* Si usas un div.hero-overlay en el HTML para oscurecer el video */
+/* Video de escritorio visible por defecto */
+.video-desktop {
+  display: block;
+}
+
+/* Video móvil oculto por defecto */
+.video-mobile {
+  display: none;
+}
+
+/* Overlay opcional para oscurecer el video */
 .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3); /* Ajusta opacidad */
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 0;
 }
 
-/* Contenido superpuesto (título, texto, botón) */
+/* Contenido superpuesto (texto, botón) */
 .hero-content {
-  position: relative; 
-  z-index: 1;         /* Encima del overlay y el video */
+  position: relative;
+  z-index: 1; /* Encima del overlay y el video */
   text-align: center;
 }
 
-/* Título y párrafo */
 .hero-content h2 {
   font-size: 3rem;
   margin-bottom: 20px;
@@ -132,7 +141,6 @@ header.scrolled {
   margin-bottom: 30px;
 }
 
-/* Botón con tu estilo dorado */
 .hero-content .btn {
   background-color: var(--gold);
   color: var(--blue);
@@ -145,6 +153,16 @@ header.scrolled {
 
 .hero-content .btn:hover {
   background-color: #d9a300;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 767px) {
+  .video-desktop {
+    display: none;       /* Ocultamos el video de escritorio en móvil */
+  }
+  .video-mobile {
+    display: block;      /* Mostramos el video de móvil en pantallas pequeñas */
+  }
 }
 
 /* ===========================
@@ -320,4 +338,25 @@ footer {
   font-size: 0.95rem;
   color: var(--blue);
   line-height: 1.4;
+}
+
+
+@media (max-width: 767px) {
+  .video-desktop {
+    display: none;
+  }
+  .video-mobile {
+    display: block;
+  }
+
+  /* Ajusta columnas del footer */
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Ajusta contenedor de equipo */
+  .equipo-container {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+  }
 }
